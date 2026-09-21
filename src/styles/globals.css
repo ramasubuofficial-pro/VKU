@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@import "./variables.css";
+
+@layer base {
+  * {
+    @apply border-vku-border;
+  }
+  body {
+    @apply bg-vku-background text-vku-text-primary font-sans antialiased;
+  }
+  
+  /* Typography Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-vku-text-primary font-bold;
+  }
+  
+  h1 { @apply text-4xl leading-tight; }
+  h2 { @apply text-2xl leading-snug; }
+  h3 { @apply text-xl leading-snug; }
+  p { @apply text-base text-vku-text-primary; }
+  
+  .text-small { @apply text-sm text-vku-text-secondary; }
+  .text-caption { @apply text-xs text-vku-text-muted; }
+}
