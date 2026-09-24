@@ -19,13 +19,13 @@ const ContactCTA = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Basic frontend validation is handled by 'required' attributes on inputs,
     // but we can add an extra check here if needed.
-    
+
     // Simulate form submission
     setStatus({ type: 'success', message: 'Thank you for your inquiry. Our team will contact you shortly.' });
-    
+
     // Reset form
     setFormData({
       fullName: '',
@@ -45,10 +45,10 @@ const ContactCTA = () => {
     <section className="py-20 lg:py-28 bg-[#F7FAFC]">
       <Container className="max-w-[1200px] mx-auto px-4 md:px-6">
         <div className="flex flex-col lg:flex-row gap-16 lg:gap-20 items-start">
-          
+
           {/* Left Column: Text Content */}
           <div className="w-full lg:w-[45%] flex flex-col">
-            <h4 className="text-[14px] md:text-[15px] font-bold tracking-[0.16em] text-[#F47920] uppercase mb-5">
+            <h4 className="text-[14px] md:text-[15px] font-bold tracking-[0.16em] text-[#053151] uppercase mb-5">
               GET IN TOUCH
             </h4>
             <h2 className="text-[34px] md:text-[42px] lg:text-[52px] xl:text-[60px] font-bold text-[#175888] leading-[1.15] mb-8">

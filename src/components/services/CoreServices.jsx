@@ -1,76 +1,99 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
-import Button from '../ui/Button';
 import { coreServices } from '../../data/servicesPage';
-import { CheckCircle2 } from 'lucide-react';
+import { ChevronDown, CheckCircle2, ArrowRight } from 'lucide-react';
 
 const CoreServices = () => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? -1 : index);
+  };
+
   return (
-    <div className="py-24 bg-white border-y border-vku-border">
-      <Container className="max-w-[1200px]">
-        <div className="text-center mb-20">
-          <SectionHeading 
-            title="Core Services" 
+    <div className="py-24 bg-[#F7F9FB]">
+      <Container className="max-w-[880px]">
+        <div className="text-center mb-16">
+          <SectionHeading
+            title="Core Services"
             subtitle="What We Do Best"
             align="center"
           />
         </div>
 
-        <div className="space-y-24 md:space-y-32">
+        <div className="space-y-3">
           {coreServices.map((service, index) => {
-            // Alternate layout: Even index -> Image Left. Odd index -> Image Right.
-            const isImageLeft = index % 2 === 0;
-
+            const isOpen = openIndex === index;
             return (
-              <div 
-                key={service.id} 
-                className={`flex flex-col lg:flex-row gap-12 lg:gap-20 items-center ${
-                  isImageLeft ? '' : 'lg:flex-row-reverse'
-                }`}
+              <div
+                key={service.id}
+                className={`bg-white rounded-xl overflow-hidden transition-all duration-300 ${isOpen
+                    ? 'shadow-[0_8px_30px_rgba(13,59,92,0.1)] border border-vku-primary/25'
+                    : 'shadow-[0_1px_3px_rgba(0,0,0,0.06)] border border-vku-border hover:border-vku-primary/30 hover:shadow-[0_4px_16px_rgba(13,59,92,0.06)]'
+                  }`}
               >
-                {/* Image Section */}
-                <div className="w-full lg:w-1/2">
-                  <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-lg border border-vku-border relative group">
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105"
-                    />
-                    {/* Decorative Overlay Box */}
-                    <div className={`absolute top-6 ${isImageLeft ? 'left-6' : 'right-6'} bg-white/90 backdrop-blur-sm p-4 rounded-xl border border-white/20 shadow-lg`}>
-                      <span className="text-3xl font-black text-vku-primary tracking-tighter opacity-80">
-                        {service.number}
+                {/* Header (always visible) */}
+                <button
+                  onClick={() => toggle(index)}
+                  className="w-full flex items-center gap-5 px-6 md:px-7 py-5 md:py-6 text-left group"
+                >
+                  {/* Number Badge */}
+                  <span
+                    className={`flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-[14px] font-bold transition-colors duration-300 ${isOpen
+                        ? 'bg-vku-primary text-white'
+                        : 'bg-[#EAF3F8] text-vku-primary group-hover:bg-vku-primary/15'
+                      }`}
+                  >
+                    {service.number}
+                  </span>
+
+                  <div className="flex-1 min-w-0">
+                    <span className={`block text-[17px] md:text-[19px] font-bold tracking-tight transition-colors duration-300 ${isOpen ? 'text-vku-primary' : 'text-vku-text-primary'}`}>
+                      {service.title}
+                    </span>
+                    {!isOpen && (
+                      <span className="block text-[13px] text-vku-text-muted mt-1 truncate">
+                        {service.subtitle}
                       </span>
+                    )}
+                  </div>
+
+                  <ChevronDown
+                    className={`w-5 h-5 flex-shrink-0 transition-all duration-300 ${isOpen ? 'rotate-180 text-vku-primary' : 'text-vku-text-muted'
+                      }`}
+                  />
+                </button>
+
+                {/* Expandable Content */}
+                <div
+                  className={`grid transition-all duration-300 ease-in-out ${isOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'}`}
+                >
+                  <div className="overflow-hidden">
+                    <div className="px-6 md:px-7 pb-7 pt-0 pl-[76px] md:pl-[84px]">
+                      <p className="text-[14px] md:text-[15px] text-vku-text-secondary leading-relaxed mb-5">
+                        {service.detailedDescription || service.description}
+                      </p>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-2 mb-6">
+                        {service.capabilities.map((capability, idx) => (
+                          <div key={idx} className="flex items-start">
+                            <CheckCircle2 className="w-4 h-4 text-vku-green mr-2 flex-shrink-0 mt-0.5" />
+                            <span className="text-[14px] text-vku-text-secondary">{capability}</span>
+                          </div>
+                        ))}
+                      </div>
+
+                      <Link
+                        to="/contact"
+                        className="group/link inline-flex items-center gap-1.5 text-[14px] font-semibold text-vku-primary hover:text-vku-orange transition-colors"
+                      >
+                        Discuss this service
+                        <ArrowRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover/link:translate-x-1" />
+                      </Link>
                     </div>
                   </div>
-                </div>
-
-                {/* Content Section */}
-                <div className="w-full lg:w-1/2">
-                  <h4 className="text-sm font-bold tracking-[0.2em] text-vku-orange uppercase mb-4">
-                    {service.subtitle}
-                  </h4>
-                  <h3 className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                    {service.title}
-                  </h3>
-                  <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                    {service.description}
-                  </p>
-                  
-                  <ul className="space-y-4 mb-10">
-                    {service.capabilities.map((capability, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle2 className="w-6 h-6 text-vku-green mr-3 flex-shrink-0 mt-0.5" />
-                        <span className="text-gray-700 font-medium">{capability}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <Link to="/contact">
-                    <Button variant="primary">Discuss this service</Button>
-                  </Link>
                 </div>
               </div>
             );

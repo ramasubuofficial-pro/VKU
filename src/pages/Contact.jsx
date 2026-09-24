@@ -10,11 +10,11 @@ const Contact = () => {
   return (
     <div className="pt-20"> {/* PT-20 for fixed header */}
       <ContactHero />
-      
+
       <OfficeDirectory />
-      
+
       <DirectContact />
-      
+
       <ContactCTA />
     </div>
   );

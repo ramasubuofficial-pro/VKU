@@ -11,19 +11,19 @@ const ContactMap = ({ locationName, latitude, longitude }) => {
     <div className="py-24 bg-white border-y border-vku-border">
       <div className="max-w-[1200px] mx-auto px-4 md:px-8">
         <div className="text-center mb-16">
-          <SectionHeading 
-            title="Find Us" 
+          <SectionHeading
+            title="Find Us"
             align="center"
           />
         </div>
-        
+
         {/* Map Container */}
         <div className="w-full h-[500px] md:h-[600px] bg-vku-surface rounded-3xl overflow-hidden border border-vku-border relative group shadow-sm">
-          
+
           {/* Decorative Map Background Pattern */}
-          <div 
+          <div
             className="absolute inset-0 opacity-20"
-            style={{ 
+            style={{
               backgroundImage: 'radial-gradient(#175888 1px, transparent 1px)',
               backgroundSize: '30px 30px'
             }}
@@ -34,7 +34,7 @@ const ContactMap = ({ locationName, latitude, longitude }) => {
             <div className="w-20 h-20 bg-vku-primary text-white rounded-full flex items-center justify-center shadow-2xl mb-6 transform group-hover:-translate-y-2 transition-transform duration-500">
               <MapPin className="w-10 h-10" />
             </div>
-            
+
             <div className="bg-white/95 backdrop-blur-md px-8 py-6 rounded-2xl shadow-xl border border-white/50 max-w-sm w-full">
               <h3 className="text-2xl font-bold text-gray-800 mb-2">
                 {locationName}
@@ -47,7 +47,7 @@ const ContactMap = ({ locationName, latitude, longitude }) => {
               </p>
             </div>
           </div>
-          
+
         </div>
       </div>
     </div>

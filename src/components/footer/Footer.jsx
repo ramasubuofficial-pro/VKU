@@ -32,8 +32,8 @@ const Footer = () => {
             <ul className="space-y-3">
               {navigationLinks.map((link) => (
                 <li key={link.name}>
-                  <Link 
-                    to={link.href} 
+                  <Link
+                    to={link.href}
                     className="text-vku-text-muted hover:text-vku-orange transition-colors text-sm"
                   >
                     {link.name}
@@ -65,7 +65,7 @@ const Footer = () => {
                 { city: "Wardha", type: "Branch Office" }
               ].map((office) => (
                 <li key={office.city} className="flex items-start gap-2">
-                  <MapPin className="w-4 h-4 text-vku-orange mt-0.5 flex-shrink-0" />
+                  <MapPin className="w-4 h-4 text-[#7FC3E8] mt-0.5 flex-shrink-0" />
                   <div>
                     <span className="text-vku-white text-sm font-medium">{office.city}</span>
                     <span className="text-vku-text-muted text-xs block">{office.type}</span>

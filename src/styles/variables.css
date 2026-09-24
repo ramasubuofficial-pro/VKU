@@ -1,22 +1,22 @@
 :root {
   /* Primary Colors */
-  --vku-primary: #175888;
+  --vku-primary: #0D3B5C;
   --vku-primary-dark: #0D3B5C;
   --vku-primary-light: #EAF3F8;
 
   /* Accents */
-  --vku-orange: #F47920;
+  --vku-orange: #0D3B5C;
   --vku-green: #52B947;
 
   /* Neutrals */
   --vku-white: #FFFFFF;
   --vku-background: #F7F9FB;
   --vku-surface: #FFFFFF;
-  
+
   --vku-text-primary: #172B3A;
   --vku-text-secondary: #667785;
   --vku-text-muted: #8A99A5;
-  
+
   --vku-border: #DCE4E9;
   --vku-divider: #E8EEF2;
   --vku-disabled-bg: #EEF2F4;
@@ -26,7 +26,7 @@
   --vku-success: #52B947;
   --vku-warning: #F47920;
   --vku-error: #D64545;
-  --vku-info: #175888;
+  --vku-info: #053151;
 
   /* Typography */
   --font-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -36,27 +36,27 @@
   --color-vku-primary: var(--vku-primary);
   --color-vku-primary-dark: var(--vku-primary-dark);
   --color-vku-primary-light: var(--vku-primary-light);
-  
+
   --color-vku-orange: var(--vku-orange);
   --color-vku-green: var(--vku-green);
-  
+
   --color-vku-white: var(--vku-white);
   --color-vku-background: var(--vku-background);
   --color-vku-surface: var(--vku-surface);
-  
+
   --color-vku-text-primary: var(--vku-text-primary);
   --color-vku-text-secondary: var(--vku-text-secondary);
   --color-vku-text-muted: var(--vku-text-muted);
-  
+
   --color-vku-border: var(--vku-border);
   --color-vku-divider: var(--vku-divider);
   --color-vku-disabled-bg: var(--vku-disabled-bg);
   --color-vku-disabled-text: var(--vku-disabled-text);
-  
+
   --color-vku-success: var(--vku-success);
   --color-vku-warning: var(--vku-warning);
   --color-vku-error: var(--vku-error);
   --color-vku-info: var(--vku-info);
-  
+
   --font-sans: var(--font-sans);
 }

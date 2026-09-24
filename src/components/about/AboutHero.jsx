@@ -11,7 +11,7 @@ const AboutHero = ({ data }) => {
 
       <Container className="relative z-10 flex flex-col items-center w-full">
         {/* Eyebrow Label */}
-        <h4 className="text-[16px] md:text-[18px] font-semibold tracking-[0.18em] text-vku-orange uppercase mb-4 md:mb-6 animate-fade-in-up">
+        <h4 className="text-[40px] md:text-[18px] font-semibold tracking-[0.18em] text-vku-orange uppercase mb-4 md:mb-6 animate-fade-in-up">
           {data.title}
         </h4>
 

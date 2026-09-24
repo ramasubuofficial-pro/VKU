@@ -46,8 +46,8 @@ const defaultReasons = [
   }
 ];
 
-const WhyChooseUs = ({ 
-  data = defaultReasons, 
+const WhyChooseUs = ({
+  data = defaultReasons,
   eyebrow = "Why choose VKU",
   title = "Professional expertise. Practical understanding.",
   description = ""
@@ -56,10 +56,11 @@ const WhyChooseUs = ({
     <div className="py-24 bg-vku-surface border-t border-gray-200">
       <Container className="max-w-[1400px]">
         <div className="text-center mb-16">
-          <SectionHeading 
-            title={title} 
+          <SectionHeading
+            title={title}
             subtitle={eyebrow}
             align="center"
+            accent="blue"
           />
           {description && (
             <p className="max-w-2xl mx-auto text-vku-text-secondary mt-4">
@@ -72,8 +73,8 @@ const WhyChooseUs = ({
           {data.map((reason, index) => {
             const Icon = reason.icon;
             return (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white p-8 lg:p-10 rounded-2xl shadow-sm border border-vku-border transition-all duration-300 hover:shadow-lg hover:-translate-y-1 group flex flex-col"
               >
                 <div className="flex items-center justify-between mb-6">

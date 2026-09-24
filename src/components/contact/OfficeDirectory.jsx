@@ -31,10 +31,10 @@ const OfficeDirectory = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
       <Container className="max-w-[1200px] mx-auto px-4 md:px-6">
-        
+
         {/* Section Header */}
         <div className="mb-14 lg:mb-16">
-          <h4 className="text-[14px] md:text-[15px] font-bold tracking-[0.16em] text-[#F47920] uppercase mb-5">
+          <h4 className="text-[14px] md:text-[15px] font-bold tracking-[0.16em] text-[text-[#053151]] uppercase mb-5">
             OUR LOCATIONS
           </h4>
           <h2 className="text-[34px] md:text-[42px] lg:text-[48px] font-bold text-[#175888] leading-[1.15] mb-6">
@@ -48,16 +48,16 @@ const OfficeDirectory = () => {
         {/* Office Grid - 4 Columns on Desktop */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10 mb-12">
           {offices.map((office, index) => (
-            <div 
+            <div
               key={index}
               className="group flex flex-col transition-all duration-300"
             >
               {/* Map Image */}
               <div className="mb-4">
-                <img 
-                  src={`/images/map-${office.city.toLowerCase()}.png`} 
-                  alt={`${office.city} Office Map`} 
-                  className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-105" 
+                <img
+                  src={`/images/map-${office.city.toLowerCase()}.png`}
+                  alt={`${office.city} Office Map`}
+                  className="w-16 h-16 object-contain transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
 
@@ -80,8 +80,8 @@ const OfficeDirectory = () => {
 
               {/* CTA Link */}
               <div className="mt-auto">
-                <a 
-                  href="#" 
+                <a
+                  href="#"
                   className="inline-flex items-center text-[15px] lg:text-[16px] font-semibold text-[#175888] transition-colors duration-300 hover:text-[#F47920]"
                   aria-label={`Find VKU office in ${office.city}`}
                 >
@@ -95,8 +95,8 @@ const OfficeDirectory = () => {
 
         {/* Bottom CTA Row (Optional, kept for consistency if needed, but the prompt says 'Update ONLY the Our Locations section') */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-end gap-6 sm:gap-10 border-t border-[#DCE4E9] pt-8">
-          <Link 
-            to="/contact" 
+          <Link
+            to="/contact"
             className="group inline-flex items-center text-[16px] lg:text-[18px] font-semibold text-[#175888] transition-colors duration-300 hover:text-[#F47920]"
           >
             Contact us

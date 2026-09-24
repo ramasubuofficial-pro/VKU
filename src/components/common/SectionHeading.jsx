@@ -1,19 +1,24 @@
 import React from 'react';
 
-const SectionHeading = ({ title, subtitle, align = 'left', className = '' }) => {
-  const alignClass = align === 'center' ? 'text-center mx-auto' : align === 'right' ? 'text-right ml-auto' : 'text-left';
-  
+const SectionHeading = ({ title, subtitle, align = 'center' }) => {
   return (
-    <div className={`mb-12 max-w-3xl ${alignClass} ${className}`}>
+    <div className={`text-${align} mb-8`}>
+      {/* Orange color changed to Corporate Blue */}
       {subtitle && (
-        <span className="inline-block py-1 px-3 rounded-full bg-vku-primary-light text-vku-primary text-sm font-semibold tracking-wider uppercase mb-4">
+        <span className="text-sm font-bold tracking-widest text-[#0D3B5C] uppercase block mb-2">
           {subtitle}
         </span>
       )}
-      <h2 className="text-3xl md:text-4xl font-bold text-vku-text-primary mb-4">
-        {title}
-      </h2>
-      <div className={`w-16 h-1 bg-vku-orange mt-2 mb-6 ${align === 'center' ? 'mx-auto' : align === 'right' ? 'ml-auto' : ''}`}></div>
+
+      {/* Title */}
+      {title && (
+        <h2 className="text-3xl md:text-4xl font-extrabold text-[#0D3B5C] tracking-tight">
+          {title}
+        </h2>
+      )}
+
+      {/* Dark Navy Underline Bar */}
+      <div className="w-16 h-1 bg-[#0D3B5C] mx-auto rounded-full mt-3"></div>
     </div>
   );
 };

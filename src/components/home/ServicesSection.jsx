@@ -8,8 +8,8 @@ const ServicesSection = () => {
     <div className="py-24 bg-white border-t border-gray-200">
       <Container className="max-w-[1400px]">
         <div className="text-center mb-16">
-          <SectionHeading 
-            title="Expertise that supports every stage of your business." 
+          <SectionHeading
+            title="Expertise that supports every stage of your business."
             subtitle="OUR SERVICES"
             align="center"
           />
@@ -17,9 +17,9 @@ const ServicesSection = () => {
             At V. K. Umbarkar & Co., we bring together professional services designed to support compliance, financial visibility, operational controls and business decision-making.
           </p>
         </div>
-        
+
         <ServiceCarousel />
-        
+
       </Container>
     </div>
   );

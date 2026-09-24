@@ -1,4 +1,4 @@
-import { 
+import {
   Target,
   ShieldCheck,
   Users,
@@ -81,6 +81,63 @@ export const coreServices = [
       "MIS & Reporting",
       "Compliance Management",
       "Virtual CFO Support"
+    ]
+  },
+  {
+    id: 5,
+    number: "05",
+    title: "Management Consulting",
+    subtitle: "Stronger Processes",
+    description: "We help businesses review their processes, strengthen controls and identify opportunities for operational improvement through structured management assignments.",
+    detailedDescription: "Growing organisations often outgrow their existing processes before they realise it. Our management consulting capabilities help businesses step back, review how work actually gets done, and identify practical improvements — without disrupting day-to-day operations.",
+    image: imgAdvisory,
+    capabilities: [
+      "Internal Audits",
+      "Process Reviews",
+      "Management Assignments"
+    ]
+  },
+  {
+    id: 6,
+    number: "06",
+    title: "Bank Audits",
+    subtitle: "Specialised Banking Expertise",
+    description: "We provide specialised audit services for banking institutions, covering different aspects of branch-level financial and operational requirements.",
+    detailedDescription: "Bank audits require domain-specific knowledge of RBI guidelines, branch-level operations and banking-specific risk areas. Our team brings this specialised expertise to statutory, concurrent, revenue and stock audit assignments for banking institutions.",
+    image: imgAssurance,
+    capabilities: [
+      "Statutory Audits",
+      "Concurrent Audits",
+      "Revenue Audits",
+      "Stock Audits for Bank Branches"
+    ]
+  },
+  {
+    id: 7,
+    number: "07",
+    title: "Systems & Process Audit",
+    subtitle: "Greater Control & Efficiency",
+    description: "We help businesses review their systems, processes and organisational structures to identify areas requiring greater control, efficiency and alignment.",
+    detailedDescription: "As businesses scale, information systems and internal processes need to keep pace. Our systems and process audit services examine IT systems, workflows and organisational structures to surface gaps in control and efficiency before they become larger issues.",
+    image: imgController,
+    capabilities: [
+      "Information Systems (IS) Audits",
+      "Process Audits",
+      "Business Structuring"
+    ]
+  },
+  {
+    id: 8,
+    number: "08",
+    title: "Project Finance",
+    subtitle: "Funding Your Growth",
+    description: "We assist businesses in navigating financing requirements for projects and working capital needs.",
+    detailedDescription: "Securing the right financing at the right structure can make or break a project's viability. Our project finance services help businesses prepare, present and navigate financing requirements — from term loans to subsidy assistance.",
+    image: imgTax,
+    capabilities: [
+      "Term Loans",
+      "Working Capital Finance",
+      "Subsidy Assistance"
     ]
   }
 ];
