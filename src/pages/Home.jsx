@@ -1,12 +1,9 @@
-import React from 'react';
+﻿import React from 'react';
 import Hero from '../components/home/Hero';
-import Journey from '../components/home/Journey';
 import ServicesSection from '../components/home/ServicesSection';
-import OurVision from '../components/home/OurVision';
+import Journey from '../components/home/Journey';
 import WhyChooseUs from '../components/home/WhyChooseUs';
 import AboutPreview from '../components/home/AboutPreview';
-import BlogPreview from '../components/home/BlogPreview';
-
 
 const Home = () => {
   return (
@@ -14,10 +11,8 @@ const Home = () => {
       <Hero />
       <AboutPreview />
       <ServicesSection />
-      <OurVision />
-      <WhyChooseUs />
       <Journey />
-      <BlogPreview />
+      <WhyChooseUs />
     </div>
   );
 };

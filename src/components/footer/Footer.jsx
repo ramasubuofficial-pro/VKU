@@ -15,7 +15,7 @@ const Footer = () => {
             <div className="text-sm font-bold tracking-[0.12em] uppercase text-white/60 mb-2">
               V. K. Umbarkar & Co.
             </div>
-            <p className="text-xl font-bold text-white leading-tight">
+            <p className="text-xl font-semibold text-white leading-tight">
               From Compliance to Clarity.
             </p>
             <p className="text-vku-text-muted text-sm leading-relaxed">

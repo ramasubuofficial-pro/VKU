@@ -19,7 +19,7 @@ const AboutHero = ({ data }) => {
         <div className="w-[60px] md:w-[80px] h-[2px] md:h-[3px] bg-vku-orange mb-10 md:mb-14 lg:mb-16 animate-fade-in-up" style={{ animationDelay: '100ms' }}></div>
 
         {/* Main Heading */}
-        <h1 className="text-[34px] sm:text-[38px] md:text-[48px] lg:text-[64px] font-bold text-vku-primary leading-[1.15] md:leading-[1.1] lg:leading-[1.08] tracking-tight max-w-[1300px] mb-8 md:mb-10 lg:mb-12 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
+        <h1 className="text-[34px] sm:text-[38px] md:text-[48px] lg:text-[64px] font-extralight text-vku-primary leading-[1.15] md:leading-[1.1] lg:leading-[1.08] tracking-tight max-w-[1300px] mb-8 md:mb-10 lg:mb-12 animate-fade-in-up" style={{ animationDelay: '200ms' }}>
           "{data.quote}"
         </h1>
 

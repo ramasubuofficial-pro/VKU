@@ -1,8 +1,8 @@
-import { 
-  Shield, 
-  Target, 
-  Users, 
-  Lightbulb, 
+import {
+  Shield,
+  Target,
+  Users,
+  Lightbulb,
   Globe,
   BookOpen,
   HandshakeIcon,
@@ -12,7 +12,7 @@ import {
 export const aboutHero = {
   title: "ABOUT US",
   quote: "From Compliance to Clarity.",
-  description: "Finance, assurance, tax and advisory for businesses.",
+  description: "",
   storyContent: [
     "Established in 1986, V. K. Umbarkar & Co. has developed a professional practice serving businesses, institutions and banking organisations through audit, taxation, finance and advisory services.",
     "Our journey is built on the belief that professional services should do more than meet regulatory requirements. They should help clients understand their financial position, strengthen their processes and make informed decisions.",

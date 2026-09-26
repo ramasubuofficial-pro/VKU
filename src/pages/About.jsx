@@ -1,5 +1,5 @@
 import React from 'react';
-import { 
+import {
   aboutHero
 } from '../data/about';
 
@@ -12,16 +12,16 @@ import OurApproach from '../components/about/OurApproach';
 
 const About = () => {
   return (
-    <div className="pt-20"> {/* PT-20 to account for fixed header */}
+    <div>
       <AboutHero data={aboutHero} />
-      
+
       <Journey />
 
       <VisionValues />
-      
+
       <LeadershipPartners />
       <WhyChooseUs />
-      
+
       <OurApproach />
     </div>
   );

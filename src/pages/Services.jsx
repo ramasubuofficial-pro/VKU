@@ -8,7 +8,7 @@ import WhyChooseUs from '../components/home/WhyChooseUs';
 
 const Services = () => {
   return (
-    <div className="pt-20"> {/* PT-20 for fixed header */}
+    <div>
       <div className="border-b border-vku-border">
         <ServicesHero />
       </div>

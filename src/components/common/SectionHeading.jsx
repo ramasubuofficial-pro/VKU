@@ -12,7 +12,7 @@ const SectionHeading = ({ title, subtitle, align = 'center' }) => {
 
       {/* Title */}
       {title && (
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[#0D3B5C] tracking-tight">
+        <h2 className="text-3xl md:text-4xl font-light text-[#0D3B5C] tracking-tight">
           {title}
         </h2>
       )}

@@ -21,7 +21,7 @@ const Blog = () => {
   }, []);
 
   return (
-    <div className="pt-20"> {/* PT-20 for fixed header */}
+    <div>
       <div className="border-b border-vku-border">
         <BlogHero />
       </div>

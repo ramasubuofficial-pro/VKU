@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
 import Button from '../ui/Button';
+import aboutImg from '../../assets/images/services/financial-advisory.jpg';
 
 const AboutPreview = () => {
   return (
@@ -11,18 +12,18 @@ const AboutPreview = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="aspect-square md:aspect-[4/3] lg:aspect-square rounded-2xl overflow-hidden shadow-lg border border-vku-border">
-              <img 
-                src="/images/ca_office_discussion_1789637114629.jpg" 
-                alt="VKU Chartered Accountants — Professional Practice" 
+              <img
+                src={aboutImg}
+                alt="VKU Chartered Accountants — Professional Practice"
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="absolute -top-6 -right-6 w-32 h-32 bg-vku-green/20 rounded-full blur-2xl z-0"></div>
           </div>
-          
-          <div>
-            <SectionHeading 
-              title="A journey built on trust. A future shaped by possibility." 
+
+          <div >
+            <SectionHeading
+              title="A journey built on trust. A future shaped by possibility."
               subtitle="ABOUT VKU"
             />
             <div className="space-y-5 text-vku-text-secondary text-[17px] leading-relaxed">
@@ -35,7 +36,7 @@ const AboutPreview = () => {
             </div>
             <div className="mt-10">
               <Link to="/about">
-                <Button variant="outline" size="lg">Meet VKU</Button>
+                <Button variant="secondary" size="lg">Meet VKU</Button>
               </Link>
             </div>
           </div>

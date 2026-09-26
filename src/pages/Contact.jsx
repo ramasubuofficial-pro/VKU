@@ -8,7 +8,7 @@ import ContactCTA from '../components/contact/ContactCTA';
 const Contact = () => {
 
   return (
-    <div className="pt-20"> {/* PT-20 for fixed header */}
+    <div>
       <ContactHero />
 
       <OfficeDirectory />

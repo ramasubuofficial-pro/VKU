@@ -24,7 +24,7 @@ const BlogDetails = () => {
   }
 
   return (
-    <div className="pt-20"> {/* PT-20 for fixed header */}
+    <div>
       
       {/* Article Header & Image */}
       <div className="bg-white pt-16 pb-12">

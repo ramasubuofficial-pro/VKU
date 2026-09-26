@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
 import { Briefcase, Building, Users, Target, Shield, CheckCircle2 } from 'lucide-react';
@@ -52,10 +52,31 @@ const WhyChooseUs = ({
   title = "Professional expertise. Practical understanding.",
   description = ""
 }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect(); // Only animate once
+        }
+      },
+      { threshold: 0.15 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
-    <div className="py-24 bg-vku-surface border-t border-gray-200">
+    <div className="py-24 border-t border-black-100 bg-gray-100 " ref={sectionRef}>
       <Container className="max-w-[1400px]">
-        <div className="text-center mb-16">
+        <div className={`text-center mb-16 transition-all duration-1000 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           <SectionHeading
             title={title}
             subtitle={eyebrow}
@@ -69,7 +90,7 @@ const WhyChooseUs = ({
           )}
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-1000 delay-300 ease-out ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
           {data.map((reason, index) => {
             const Icon = reason.icon;
             return (
