@@ -21,7 +21,7 @@ const PageHero = ({ eyebrow, title, description, isQuote = false }) => {
         <div className="w-[85px] h-[3px] bg-vku-orange mt-5 mb-8 md:mb-10 lg:mb-12 animate-fade-in-up" style={{ animationDelay: '100ms' }}></div>
         
         {/* Main Heading */}
-        <h1 className="text-[36px] sm:text-[42px] md:text-[50px] lg:text-[64px] font-bold text-vku-primary leading-[1.1] md:leading-[1.1] lg:leading-[1.08] tracking-tight max-w-[1050px] mb-8 md:mb-10 lg:mb-10 animate-fade-in-up whitespace-pre-line" style={{ animationDelay: '200ms' }}>
+        <h1 className="text-[36px] sm:text-[42px] md:text-[50px] lg:text-[64px] font-light text-vku-primary leading-[1.1] md:leading-[1.1] lg:leading-[1.08] tracking-tight max-w-[1050px] mb-8 md:mb-10 lg:mb-10 animate-fade-in-up whitespace-pre-line" style={{ animationDelay: '200ms' }}>
           {isQuote ? `"${title}"` : title}
         </h1>
         

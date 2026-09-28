@@ -46,6 +46,23 @@ const partners = [
 const LeadershipPartners = () => {
   return (
     <section className="py-20 lg:py-24 bg-white">
+      <style>
+        {`
+          @keyframes fadeUpPartner {
+            from {
+              opacity: 0;
+              transform: translateY(30px);
+            }
+            to {
+              opacity: 1;
+              transform: translateY(0);
+            }
+          }
+          .animate-partner-section {
+            animation: fadeUpPartner 0.7s ease-out both;
+          }
+        `}
+      </style>
       <Container className="max-w-[1200px] mx-auto px-4 md:px-6">
         
         {/* Section Header */}
@@ -74,7 +91,7 @@ const LeadershipPartners = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center">
             {/* Left: Professional Portrait */}
-            <div className="w-full aspect-[4/5] bg-[#F7F9FB] border border-[#DCE4E9] rounded-[12px] flex flex-col items-center justify-center text-[#667785] overflow-hidden">
+            <div className="w-full aspect-[4/5] bg-[#F7F9FB] border border-[#DCE4E9] rounded-[12px] flex flex-col items-center justify-center text-[#667785] overflow-hidden animate-partner-section" style={{ animationDelay: '100ms' }}>
               <img src={mayankImg} alt="CA. Mayank Umbarkar" className="w-full h-full object-cover" />
             </div>
 
@@ -112,7 +129,8 @@ const LeadershipPartners = () => {
             {partners.map((partner, index) => (
               <div 
                 key={index}
-                className="bg-white border border-[#DCE4E9] rounded-[10px] p-6 lg:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#175888]/30 hover:shadow-sm flex flex-col"
+                className="bg-white border border-[#DCE4E9] rounded-[10px] p-6 lg:p-7 transition-all duration-300 hover:-translate-y-1 hover:border-[#175888]/30 hover:shadow-sm flex flex-col animate-partner-section"
+                style={{ animationDelay: `${200 + index * 100}ms` }}
               >
                 <div className="w-full aspect-[4/5] bg-[#F7F9FB] rounded-[8px] mb-6 overflow-hidden">
                   <img src={partner.image} alt={partner.name} className="w-full h-full object-cover" />
